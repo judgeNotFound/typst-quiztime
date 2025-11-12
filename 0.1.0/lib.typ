@@ -47,9 +47,6 @@
 }
 
 #let quiz(
-  // Give your quiz a title
-  quiz-title: "",
-
   // Questions
   questions: (),
 

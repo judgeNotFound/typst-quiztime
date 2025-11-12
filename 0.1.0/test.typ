@@ -4,15 +4,15 @@
   text: "What color is the sky?",
   kind: "multiple-choice",
   answers: ("Blue", "Red", "Yellow", "Gray"),
-  true-answers: (1,4)
+  true-answers: (3,4)
 )
 
 #let q2 = question(
-  text: "What color is the sky?",
+  text: "What color is the sea?",
   kind: "multiple-choice",
   answers: ("Blue", "Red", "Yellow", "Gray"),
-  true-answers: (1,4),
+  true-answers: (1),
   show-solutions: true
 )
 
-#quiz(quiz-title: "A title", questions: (q1,q2), pre-numbering: "Frage ")
+#quiz(questions: (q1,q2), pre-numbering: "Frage ")
