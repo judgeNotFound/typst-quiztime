@@ -22,3 +22,7 @@ Typst package to create quizzes.
 
 #quiz(questions: (q1,q2), pre-numbering: "Question ")
 ```
+
+Gives:
+
+![](./output.png)
