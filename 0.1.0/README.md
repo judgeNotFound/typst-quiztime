@@ -3,24 +3,31 @@
 Typst package to create quizzes.
 
 ```typst
-#import "@preview/quiztime:0.1.0": quiz, question
+#import "lib.typ": question, quiz
 
 #let q1 = question(
   text: "What color is the sky?",
   kind: "multiple-choice",
   answers: ("Blue", "Red", "Yellow", "Gray"),
-  true-answers: (3,4)
 )
 
 #let q2 = question(
+  text: "Why do you think is the world where it is?",
+  kind: "text",
+  answers: ("Because no one took proper care of it.",),
+  show-solutions: true,
+  answer-space: 50pt,
+)
+
+#let q3 = question(
   text: "What color is the sea?",
   kind: "multiple-choice",
   answers: ("Blue", "Red", "Yellow", "Gray"),
-  true-answers: (1),
+  true-answers: (1,),
   show-solutions: true
 )
 
-#quiz(questions: (q1,q2), pre-numbering: "Question ")
+#quiz(questions: (q1,q2,q3), pre-numbering: "Question ")
 ```
 
 Gives:

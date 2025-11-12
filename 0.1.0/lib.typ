@@ -1,5 +1,5 @@
-#let checkbox = "☐"
-#let checkbox-true = "☑︎"
+#let checkbox = text("◯", size: 8pt)
+#let checkbox-true = text("⬤", size: 8pt)
 
 #let question(
   // Actual question to be asked
@@ -7,7 +7,7 @@
 
   // Possible values: multiple-choice, text
   kind: "",
-
+  
   // Answers for a multiple choice question
   // Only used if kind = "multiple-choice"
   answers: (),
@@ -42,7 +42,12 @@
       idx += 1
     }
   } else {
-    v(answer-space)
+    if show-solutions and answers.len() > 0 {
+      h(20pt)
+      answers.at(0)
+    } else {
+      v(answer-space)
+    }
   }
 }
 
